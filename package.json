@@ -10,6 +10,9 @@
   "homepage": "https://github.com/askldjd/disability-notices.git",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-compile-handlebars": "^0.6.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-webserver": "^0.9.1"
   }
