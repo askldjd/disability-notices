@@ -1,0 +1,16 @@
+{
+  "name": "disability-notices",
+  "version": "0.0.1",
+  "description": "Generates disability templates",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:askldjd/disability-notices.git"
+  },
+  "homepage": "https://github.com/askldjd/disability-notices.git",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-webserver": "^0.9.1"
+  }
+}

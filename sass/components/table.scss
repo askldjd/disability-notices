@@ -1,0 +1,32 @@
+.rTable {
+    display: table;
+    width: 100%;
+
+    &Row {
+        display: table-row;
+    }
+
+    &Heading {
+        display: table-header-group;
+    }
+
+    &Cell, &Head {
+        display: table-cell;
+        padding: 3px 10px;
+        width: 33%;
+    }
+
+    &Heading {
+        display: table-header-group;
+        font-weight: bold;
+    }
+
+    &Foot {
+        display: table-footer-group;
+        font-weight: bold;
+    }
+
+    &Body {
+        display: table-row-group;
+    }
+}
