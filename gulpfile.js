@@ -6,6 +6,7 @@ var concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var handlebars = require("gulp-compile-handlebars");
 var webserver = require("gulp-webserver");
+var templateData = require("./data");
 
 gulp.task("sass", function() {
     return gulp.src("./sass/**/*.scss")
@@ -14,7 +15,6 @@ gulp.task("sass", function() {
 });
 
 gulp.task("hbs", function() {
-    var templateData = {};
     var options = {
         partials: {
             "Standard Signature Block": ""
