@@ -65,10 +65,10 @@
         </div>
 
         {{#eq case.qdd_priority_flag 'Y'}}
-            <p class="txtuppercase">please expedite this urgent request.</p>
+            <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
         {{/eq}}
         {{#eq case.cal_priority_flag 'Y'}}
-            <p class="txtuppercase">please expedite this urgent request.</p>
+            <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
         {{/eq}}
 
         <p>We are the office that makes disability decisions for the Social Security Administration.  {{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} is applying for or is receiving disability benefits due to the following conditions:  {{case.allegationsText}}.  This is not an authorization to perform an examination.</p>

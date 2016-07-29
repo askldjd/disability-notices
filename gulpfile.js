@@ -22,10 +22,16 @@ gulp.task("hbs", function() {
         },
         helpers: {
             dateHelperFormat: function () {},
-            eq: function () {},
             prompt: function () {},
             dateHelperAddDaysToCurrentDate: function () {},
-            cannedText: function () {}
+            cannedText: function () {},
+            eq: function (valOne, valTwo, block) {
+
+                if (valOne === valTwo) {
+                    return block.fn(this);
+                }
+
+            }
         }
     };
 
