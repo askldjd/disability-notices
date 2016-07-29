@@ -1,0 +1,54 @@
+"use strict";
+
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var concat = require("gulp-concat");
+var rename = require("gulp-rename");
+var handlebars = require("gulp-compile-handlebars");
+var webserver = require("gulp-webserver");
+var templateData = require("./data");
+
+gulp.task("sass", function() {
+    return gulp.src("./sass/**/*.scss")
+        .pipe(sass().on("error", sass.logError))
+        .pipe(concat("styles.css"))
+        .pipe(gulp.dest("./dist/css/"));
+});
+
+gulp.task("hbs", function() {
+    var options = {
+        partials: {
+            "Standard Signature Block": ""
+        },
+        helpers: {
+            dateHelperFormat: function () {},
+            prompt: function () {},
+            dateHelperAddDaysToCurrentDate: function () {},
+            cannedText: function () {},
+            eq: function (valOne, valTwo, block) {
+
+                if (valOne === valTwo) {
+                    return block.fn(this);
+                }
+
+            }
+        }
+    };
+
+    return gulp.src("templates/**/*.hbs")
+        .pipe(handlebars(templateData, options))
+        .pipe(rename(function(path) {
+            path.extname = ".html";
+        }))
+        .pipe(gulp.dest("dist"));
+});
+
+gulp.task("webserver", function() {
+    gulp.src("dist")
+        .pipe(webserver({
+            livereload: true,
+            open: true
+        }));
+});
+
+gulp.task("build", ["sass", "hbs"]);

@@ -1,0 +1,58 @@
+@import "components/table";
+
+.header {
+    float: right;
+}
+
+.title {
+    text-align: center;
+}
+
+.clearfix {
+    overflow: auto;
+    zoom: 1;
+}
+
+.clearfix::before {
+    content: " ";
+}
+
+.txtuppercase {
+    text-transform: uppercase;
+}
+
+.stateHeader {
+    display: flex;
+
+    &Parent {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &Text {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-self: flex-start;
+    }
+
+    &Img {
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+}
+
+.standardHeader {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+}
+
+h3 {
+    margin-top: 0em;
+}
+
+body {
+    font-family: "Times New Roman";
+    font-size: 15px;
+}
+
