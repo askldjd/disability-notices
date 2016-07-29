@@ -11,7 +11,8 @@ var templateData = require("./data");
 gulp.task("sass", function() {
     return gulp.src("./sass/**/*.scss")
         .pipe(sass().on("error", sass.logError))
-        .pipe(concat("./dist/css"));
+        .pipe(concat("styles.css"))
+        .pipe(gulp.dest("./dist/css/"));
 });
 
 gulp.task("hbs", function() {
