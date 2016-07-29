@@ -20,6 +20,7 @@ gulp.task("hbs", function() {
         partials: {
             "Standard Signature Block": ""
         },
+        batch: ["./partials/"],
         helpers: {
             dateHelperFormat: function () {},
             prompt: function () {},
