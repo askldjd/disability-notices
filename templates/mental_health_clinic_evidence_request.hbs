@@ -63,7 +63,6 @@
                 <div class="rTableCell"></div>
             </div>
         </div>
-
         {{#eq case.qdd_priority_flag 'Y'}}
             <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
         {{/eq}}
@@ -71,21 +70,22 @@
             <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
         {{/eq}}
 
-        <p>We are the office that makes disability decisions for the Social Security Administration.  {{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} is applying for or is receiving disability benefits due to the following conditions:  {{case.allegationsText}}.  This is not an authorization to perform an examination.</p>
+        <p>We are the office that makes disability decisions for the Social Security Administration. {{clmt_full_name}} is applying for or is receiving disability benefits due to the following conditions: {{case.allegationsText}}.  This is not an authorization to perform an examination.</p>
 
         <p><strong>What We Need From You</strong></p>
 
         <p>To help us evaluate this claim, please send records covering the period of:</p>
 
-        <p>{{prompt dateRange "Treatment Dates" 'MMMM, DD, YYYY'}}</p>
+        <p>{{prompt dateRange "Treatment Dates" "MMMM, DD, YYYY"}}</p>
 
         <p>{{prompt text "Enter text here"}}</p>
 
         <p>{{cannedText cannedText}}</p>
 
-        <p>Include the following information: medical history, psychiatric history, clinical findings, laboratory findings, imaging reports, treatment prescribed and the response, diagnosis, and prognosis.</p>
+        <p>Include the following information: medical history, psychiatric history, clinical findings, laboratory findings, imaging reports, treatment prescribed and the response, diagnosis, and prognosis</p>
 
-        <p>Please respond by {{dateHelperAddDaysToCurrentDate 10 'MMMM D, YYYY'}}.
+        <p>Please respond by {{dateHelperAddDaysToCurrentDate 10 "MMMM D, YYYY"}}.
+
         {{#eq case.qdd_priority_flag 'Y'}}
             If you do not have the requested information or you cannot provide a response by {{dateHelperAddDaysToCurrentDate 10 'MMMM D, YYYY'}}, please call to let us know.
         {{/eq}}
@@ -93,12 +93,11 @@
             If you do not have the requested information or you cannot provide a response by {{dateHelperAddDaysToCurrentDate 10 'MMMM D, YYYY'}}, please call to let us know.
         {{/eq}}
 
-        We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.
+        We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.</p>
 
-        Please provide a statement based on your findings.  Your statement should express your opinion about your patient's ability to do work-related physical and/or mental activities despite the limitations imposed by his/her medical condition(s).  For physicial impairments, these activities include sitting, standing, walking, lifting, carrying, handling objects, hearing, speaking, and traveling.  For mental impairments, these activities include: understanding, carrying out and remembering instructions, and responding appropriately to supervision, coworkers, and work pressures.
+        <p>Please provide a statement based on your findings.  Your statement should express your opinion about your patient's ability to do work-related physical and/or mental activities despite the limitations imposed by his/her medical condition(s).  For physicial impairments, these activities include sitting, standing, walking, lifting, carrying, handling objects, hearing, speaking, and traveling.  For mental impairments, these activities include: understanding, carrying out and remembering instructions, and responding appropriately to supervision, coworkers, and work pressures.</p>
 
-        If it is determined that we need additional information regarding your patient's impairments, would you be willing to perform an examination to provide additional findings?
-        Please contact us if you would be willing to perform this examination.  We will assume that you do not wish to perform the examination if you do not response.</p>
+        <p>If it is determined that we need additional information regarding your patient's impairments, would you be willing to perform an examination to provide additional findings?  Please contact us if you would be willing to perform this examination.  We will assume that you do not wish to perform the examination if you do not response.</p>
 
         <p><strong>If You Have Questions</strong></p>
 
@@ -108,5 +107,6 @@
 
         {{>"Standard Signature Block"}}
 
+        {{>paperwork_reduction_act}}
     </body>
 </html>
