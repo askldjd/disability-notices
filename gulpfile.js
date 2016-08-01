@@ -48,6 +48,7 @@ gulp.task("webserver", function() {
     gulp.src("dist")
         .pipe(webserver({
             livereload: true,
+            directoryListing: {enable: true, path: "./dist/"},
             open: true
         }));
 });

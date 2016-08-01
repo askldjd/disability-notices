@@ -19,6 +19,7 @@ module.exports = {
         qdd_priority_flag: "N",
         cal_priority_flag: "N"
     },
+    currentDate: new Date().toDateString(),
     vendor: {
         offeringVendor: {
             vendorId: 2,
