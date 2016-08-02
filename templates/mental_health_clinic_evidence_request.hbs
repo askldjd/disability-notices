@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Intro Letter</title>
+        <title>Mental Health Clinic Evidence Request</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -45,24 +45,8 @@
             </div>
         </div>
 
-        <div class="rTable">
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.offeringVendor.vendorName.organizationName}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.serviceCommunication.correspondenceAddress.line1}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">
-                    {{vendor.serviceCommunication.correspondenceAddress.city}}
-                    {{vendor.serviceCommunication.correspondenceAddress.state}}
-                    {{vendor.serviceCommunication.correspondenceAddress.zip5}}
-                </div>
-                <div class="rTableCell"></div>
-            </div>
-        </div>
+        {{>addressee_information}}
+
         {{#eq case.qdd_priority_flag 'Y'}}
             <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
         {{/eq}}

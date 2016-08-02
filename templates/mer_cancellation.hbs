@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Intro Letter</title>
+        <title>MER Cancellation</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -45,24 +45,8 @@
             </div>
         </div>
 
-        <div class="rTable">
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.offeringVendor.vendorName.organizationName}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.serviceCommunication.correspondenceAddress.line1}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">
-                    {{vendor.serviceCommunication.correspondenceAddress.city}}
-                    {{vendor.serviceCommunication.correspondenceAddress.state}}
-                    {{vendor.serviceCommunication.correspondenceAddress.zip5}}
-                </div>
-                <div class="rTableCell"></div>
-            </div>
-        </div>
+        {{>addressee_information}}
+
         <h3 class="title"><u>MEDICAL EVIDENCE REQUEST CANCELLATION</u></h3>
 
         <p>On {{date_original_request}} we requested medical records for {{clmt_full_name}} that we no longer need. <strong>Please cancel the request.</strong></p>

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Intro Letter</title>
+        <title>VA Customized Evidence Request</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -43,24 +43,9 @@
                 <div class="rTableCell">Vendor Number: {{vendor.offeringVendor.vendorId}}</div>
             </div>
         </div>
-        <div class="rTable">
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.offeringVendor.vendorName.organizationName}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">{{vendor.serviceCommunication.correspondenceAddress.line1}}</div>
-                <div class="rTableCell"></div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell">
-                    {{vendor.serviceCommunication.correspondenceAddress.city}}
-                    {{vendor.serviceCommunication.correspondenceAddress.state}}
-                    {{vendor.serviceCommunication.correspondenceAddress.zip5}}
-                </div>
-                <div class="rTableCell"></div>
-            </div>
-        </div>
+
+        {{>addressee_information}}
+
         <h3 class="title">CUSTOMIZED REQUEST</h3>
 
         <p>To help us evaluate this claim, please send records covering the period of:</p>
