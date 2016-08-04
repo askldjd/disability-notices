@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Medical Deferment-Expired</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeaderText">
+                <h3>DISABILITY DETERMINATIONS SERVICE DIVISION</h3>
+                <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
+                <span>Phone 208-327-7331505</span>
+            </div>
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+
+        {{>addressee_information}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration. Because of the nature of your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s condition, or when your/his/her condition began, our rules required us to wait until {{med_deferment_end_date}} to evaluate your/his/her claim. We now need updated information about your/his/her condition, medical sources, or treatment.</p>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+
+        <p>Please call the phone number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, and a call back number.</p>
+
+        <p>Thank you for your help.</p>
+
+        {{>"Standard Signature Block"}}
+
+    </body>
+</html>

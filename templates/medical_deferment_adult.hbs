@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Medical Deferment-Child</title>
+        <title>Medical Deferment-Adult</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -19,9 +19,9 @@
 
         {{>addressee_information}}
 
-        <p>We are the office that makes disability decisions for the Social Security Administration. To be eligible for disability benefits, {{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} must have an impairment or combination of impairments that meet our rules. His/her physical or mental impairment(s) must result in marked and severe functional limitations that have lasted, or are expected to last for at least 12 months in a row or expected to result in death.</p>
+        <p>We are the office that makes disability decisions for the Social Security Administration. To be eligible for disability benefits, you/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} must have an impairment or combination of impairments that meet our rules. You/he/she must have a medical condition(s) that keeps you/him/her from doing any type of work, and has lasted or is expected to last for at least 12 months in a row or result in death.</p>
 
-        <p>Since his/her {{manually_enter_med_hold_condition}} occurred recently, our rules require us to reevaluate his/her condition as of {{med_deferment_end_date}}. We may contact you for information about his/her condition. We will request updated information from his/her sources before we make a final decision.</p>
+        <p>Since your/his/her {{manually_enter_med_hold_condition}} occurred recently, our rules require us to reevaluate your/his/her condition as of {{med_deferment_end_date}}. We may contact you for information about your/his/her condition. We will request updated information from your/his/her sources before we make a final decision.</p>
 
         <p>{{prompt text "Enter text here"}}</p>
 
