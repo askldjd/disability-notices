@@ -1,0 +1,41 @@
+.square {
+    width: 15px;
+    height: 15px;
+    background-color: $white;
+    border: 1px solid $black;
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: -2px;
+}
+
+.signature {
+    span {
+        display: inline-block;
+        padding-right: 15px;
+
+        &:nth-child(4)  {
+            padding-right: 20px;
+        }
+
+        &:nth-child(5) {
+            padding-right: 130px;
+        }
+    }
+    
+    &.address {
+        span {
+            &:nth-child(5) {
+                padding-right: 280px;
+            }
+
+            &:nth-child(6) {
+                padding-right: 135px;
+            }
+
+            &:nth-child(7) {
+                padding-right: 80px;
+            }
+        }
+    }
+}
