@@ -53,4 +53,8 @@ gulp.task("webserver", function() {
         }));
 });
 
+gulp.task("watch", function () {
+    gulp.watch(["./templates/**/*.hbs", "./sass/**/*.scss"], ["build"]);
+});
+
 gulp.task("build", ["sass", "hbs"]);

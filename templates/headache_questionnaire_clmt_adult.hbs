@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Headache Questionnaire Claimant-Adult</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+        <div class="rTable">
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Claimant Name: {{clmt_full_name}}</div>
+            </div>
+        </div>
+
+        {{>barcode}}
+
+        <h3 class="title txtuppercase">Please Complete And Return By {{clmt_form_return_date}}</h3>
+
+        <p class="title txtuppercase"><strong><u>Headache Questionnaire</u></strong></p>
+
+        <p>If you need more space, please attach additional page(s).</p>
+
+        <p>1) When did you start having headaches? (Approximate date) _________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>2) When was your last headache? _______________________________________________________________</p>
+
+        <p>3) What causes your headaches? ________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>4) Describe a typical headache:</p>
+        <ol>
+            <li>Type (for example, migraine, sinus, cluster)  ___________________________________________________</li>
+            <li>Location (for example, front, temple, middle, side, back) _________________________________________</li>
+            <li>
+                Symptoms (for example, daily, weekly, monthly) ______________________________________________
+                <span>______________________________________________________________________________________</span>
+            </li>
+        </ol>
+
+        <p>5) How often do you get headaches? (for example, daily, weekly, monthly) ______________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>6) How long does a typical headache last? _________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>7) Describe any limitations in your activities during a typical headache and how long these limitations last <br>(for example, darkened room, lying without moving, sleep disturbance).</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>8) List current headache medication(s).</p>
+
+        <table>
+            <tr class="txtuppercase">
+                <td>Medication, Dosage, and Frequency</td>
+                <td>Date Started</td>
+                <td>If Prescribed, Name of Health Care Professional</td>
+                <td>Side Effect(s)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>9) Have you visited an emergency room for treatment to relieve a headache? If so, when and where?</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>10) Do you use any other treatments to relieve your headaches? if so, describe. ___________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>If you have seen any health care professionals for your headaches since you filed your claim, complete the chart below.<p>
+
+        <table>
+            <tr class="txtuppercase">
+                <td width="35%">Health Care Professional Name</td>
+                <td width="35%">Address And Phone Number</td>
+                <td>Date of Last Visit and Next Scheduled Appointment (if any)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br><br><br><br>
+
+        <p class="signature">
+            <span>__________________________________________</span><span>___________________</span><span>___________________________</span>
+            <span>Name of person completing this form (Please print)</span><span>Date</span><span>Phone</span>
+        </p>
+        <p class="signature">
+            <span>__________________________________________</span><br><br>
+            <span>__________________________________________</span><br><br>
+            <span>__________________________________________</span><br>
+            <span>Address</span>
+        </p>
+
+        {{>paperwork_reduction_act}}
+    </body>
+</html>
