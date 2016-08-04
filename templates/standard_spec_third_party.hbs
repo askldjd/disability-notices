@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VA Standard Evidence Request</title>
+        <title>Standard Spec Third Party</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -16,6 +16,7 @@
                 <img src="{{letterhead}}"></img>
             </div>
         </div>
+
         <div class="rTable">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -42,13 +43,42 @@
                 <div class="rTableCell"></div>
                 <div class="rTableCell">Vendor Number: {{vendor.offeringVendor.vendorId}}</div>
             </div>
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Date: {{currentDate}}</div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Case ID: {{case.caseId}}</div>
+            </div>
         </div>
 
-        {{>addressee_information}}
-
-        <h3 class="title">STANDARD SSA-DDS Health Summary Request</h3>
-
-        <p>We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.</p>
+        <div class="rTable">
+            <div class="rTableRow">
+                <div class="rTableCell">{{vendor.offeringVendor.vendorName.organizationName}}</div>
+                <div class="rTableCell"></div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell">{{vendor.serviceCommunication.correspondenceAddress.line1}}</div>
+                <div class="rTableCell"></div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    {{vendor.serviceCommunication.correspondenceAddress.city}}
+                    {{vendor.serviceCommunication.correspondenceAddress.state}}
+                    {{vendor.serviceCommunication.correspondenceAddress.zip5}}
+                </div>
+                <div class="rTableCell"></div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    {{third_party_address}}
+                </div>
+                <div class="rTableCell"></div>
+            </div>
+        </div>
 
         {{>"Standard Signature Block"}}
     </body>

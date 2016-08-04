@@ -20,6 +20,7 @@ gulp.task("hbs", function() {
         partials: {
             "Standard Signature Block": ""
         },
+        batch: ["./partials/"],
         helpers: {
             dateHelperFormat: function () {},
             prompt: function () {},
@@ -47,8 +48,13 @@ gulp.task("webserver", function() {
     gulp.src("dist")
         .pipe(webserver({
             livereload: true,
+            directoryListing: {enable: true, path: "./dist/"},
             open: true
         }));
+});
+
+gulp.task("watch", function () {
+    gulp.watch(["./templates/**/*.hbs", "./sass/**/*.scss"], ["build"]);
 });
 
 gulp.task("build", ["sass", "hbs"]);

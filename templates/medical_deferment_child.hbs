@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Medical Deferment-Child</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeaderText">
+                <h3>DISABILITY DETERMINATIONS SERVICE DIVISION</h3>
+                <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
+                <span>Phone 208-327-7331505</span>
+            </div>
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+
+        {{>addressee_information}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration. To be eligible for disability benefits, {{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} must have an impairment or combination of impairments that meet our rules. His/her physical or mental impairment(s) must result in marked and severe functional limitations that have lasted, or are expected to last for at least 12 months in a row or expected to result in death.</p>
+
+        <p>Since his/her {{manually_enter_med_hold_condition}} occurred recently, our rules require us to reevaluate his/her condition as of {{med_deferment_end_date}}. We may contact you for information about his/her condition. We will request updated information from his/her sources before we make a final decision.</p>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+
+        <p>If you have any questions or wish to provide more information, please call us at the phone number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, and a call back number.</p>
+
+        <p>Thank you for your help.</p>
+
+        {{>"Standard Signature Block"}}
+
+    </body>
+</html>

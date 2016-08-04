@@ -30,3 +30,16 @@
         display: table-row-group;
     }
 }
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+
+    th, td {
+        border: 1px solid $black;
+        height: 50px;
+        word-wrap: break-word;
+        padding: 10px;
+        text-align: center;
+    }
+}

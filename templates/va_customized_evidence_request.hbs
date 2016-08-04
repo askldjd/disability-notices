@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>VA Standard Evidence Request</title>
+        <title>VA Customized Evidence Request</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -46,10 +46,20 @@
 
         {{>addressee_information}}
 
-        <h3 class="title">STANDARD SSA-DDS Health Summary Request</h3>
+        <h3 class="title">CUSTOMIZED REQUEST</h3>
 
+        <p>To help us evaluate this claim, please send records covering the period of:</p>
+
+        <p>{{prompt dateRange "Treatment Dates" 'MMMM, DD, YYYY'}}</p>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+        
         <p>We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.</p>
 
         {{>"Standard Signature Block"}}
+
+        {{>paperwork_reduction_act}}
     </body>
 </html>
