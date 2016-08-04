@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Pain Questionnaire Claimant-Adult</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+        <div class="rTable">
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Claimant Name: {{clmt_full_name}}</div>
+            </div>
+        </div>
+
+        {{>barcode}}
+
+        <h3 class="title txtuppercase">Please Complete And Return By {{clmt_form_return_date}}</h3>
+
+        <p class="title txtuppercase"><strong><u>Pain Questionnaire</u></strong></p>
+
+        <p>If you need more space, please attach additional page(s).</p>
+
+        <p>1) Describe where the pain is located. Does it stay in one location or move to other areas of your body?</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>2) Describe the pain (for example, burning, dull, sharp, aching) and severity (for example, mild, moderate, severe).</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>3) How often do you have pain? When does it occur? ________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>4) How long does it last? _______________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>5) What activities or circumstances cause or increase the pain? ________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>6) Has the pain limited or restricted your activites? <span class="square"></span> Yes  <span class="square"></span> No</p>
+        <p>If yes, explain and provide examples. ____________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>7) Does pain affect your ability to think and concentrate? <span class="square"></span> Yes  <span class="square"></span> No</p>
+        <p>If yes, explain and provide examples. ____________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>List current pain medication(s).</p>
+
+        <table>
+            <tr class="txtuppercase">
+                <td>Medication Name, Dosage, and Frequency</td>
+                <td>Date Started</td>
+                <td>If Prescribed, Name of Doctor</td>
+                <td>Side Effect(s)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>8) Do your medication(s) relieve the pain? <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <p>9) Describe any other treatments you use to relieve your pain (for example, hot baths, therapy, exercise. How well do they work? How often do you use them? __________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>If you have seen any health care professionals for your pain since you filed your claim, complete the chart below (for example, doctors, pain clinics, rehabilitation centers).<p>
+
+        <table>
+            <tr class="txtuppercase">
+                <td width="35%">Name</td>
+                <td width="35%">Address And Phone Number</td>
+                <td>Date of Last Visit and Next Scheduled Appointment (if any)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br><br><br><br>
+
+        <p class="signature">
+            <span>__________________________________________</span><span>___________________</span><span>___________________________</span>
+            <span>Name of person completing this form (Please print)</span><span>Date</span><span>Phone</span>
+        <p>
+        <p class="signature address">
+        <span>__________________________________________</span><span>___________________</span><span>_____________</span><span>____________</span>
+            <span>Address</span><span>City</span><span>State</span><span>ZIP</span>
+        </p>
+
+        {{>paperwork_reduction_act}}
+    </body>
+</html>
