@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Release Of Information (827) Update</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeaderText">
+                <h3>DISABILITY DETERMINATIONS SERVICE DIVISION</h3>
+                <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
+                <span>Phone 208-327-7331505</span>
+            </div>
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+
+        {{>addressee_information}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you because we need an updated signed authorization form to send to your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s health care provider(s).</p>
+
+        <p>We are enclosing a new authorization form. Please sign and date the form with black or blue ink. A witness should also sign the form. This witness can be a friend or relative</p>
+
+        <p><strong>Who Should Sign The Form(s)</strong></p>
+
+        <ul>
+            <li>If the claim is for an individual over age {{age_of_majority}}, the individual must sign the attached form(s). However, if the individual has a legal guardian, the legal guardian must sign the form(s).</li>
+            <li>If the claim is for a child under age 12, the parent or legal guardian must sign the attached form(s), but not the child.</li>
+            <li>If the claim is for a child between the ages of 12 and {{age_of_majority}}, both the child and the parent or legal guardian must sign the attached form(s).</li> 
+        </ul>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+
+        <p><strong>What You Need To Do</strong></p>
+
+        <p>Please return the completed form(s) in the enclosed envelope by {{clmt_827_return_date}}. You may use the enclosed return envelope or fax your completed form to us. Please note the return address may be to a scanning center who works with us. <strong>The completed form must include the barcode page on top of the form</strong></p>
+        
+        <p>If you do not return the form(s), we may decide the case based on the information we already have in file. This means that we could find that you/he/she are/is not disabled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.</p>
+
+        <p><strong>If You Have Questions</strong></p>
+
+        <p>If you have any questions, please contact us at the number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, his/her name, and a call back number.</p>
+
+        <p>Thank you for your help.</p>
+
+        {{>"Standard Signature Block"}}
+
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Questionnaire Cover Letter Claimant</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeaderText">
+                <h3>DISABILITY DETERMINATIONS SERVICE DIVISION</h3>
+                <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
+                <span>Phone 208-327-7331505</span>
+            </div>
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+
+        {{>addressee_information}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} because we need more information about your/his/her condition, daily activities, or work history.</p>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+
+        <p><strong>What You Need To Do</strong></p>
+
+        <p><strong>Complete this form with black or blue ink.</strong> We realize that some of the questions may not seem relevant to the case, but please answer all of the questions to the best of your ability.</p>
+       
+        <p>Return the completed form(s) by {{clmt_form_return_date}}. If you do not return the form(s), we may decide the case based on the information we already have in file. This means that we could find that you/he/she are/is not disabled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.</p>
+
+        <p><strong>How To Return The Form</strong></p>
+
+        <p>You may use the enclosed return envelope or fax your completed form to us. Please note the return adddress may be to a scanning center who works with us. <strong>The completed form must include the barcode page on top of the form.</strong></p>
+
+        <p><strong>If You Have Questions</strong></p>
+
+        <p>If you have any questions, please contact us at the number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, his/her name, and a call back number.</p>
+
+        <p>Thank you for your help.</p>
+
+        {{>"Standard Signature Block"}}
+
+    </body>
+</html>
