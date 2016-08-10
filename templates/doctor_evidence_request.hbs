@@ -12,10 +12,9 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
 
         <div class="rTable">
             <div class="rTableRow">
@@ -91,5 +90,8 @@
 
         {{>"Standard Signature Block"}}
 
+	{{>enclosure}}
+
+	{{>paperwork_reduction_act}}
     </body>
 </html>

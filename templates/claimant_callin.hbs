@@ -12,21 +12,28 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
 
         {{>addressee_information}}
 
         <p class="title"><strong><u>Reminder</u></strong></p>
 
-        <p>We are the office that makes disability decisions for the Social Security Administration.  On {{date_original_request}} we requested information from you about {{clmt_full_name}}'s case. To date, we have not received a response.</p>
+	{{>sno_language}}
+
+	{{>spanish_language}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration.  On {{original_request_date}} we requested information from you about {{clmt_full_name}}'s case. To date, we have not received a response.</p>
 
         <p>We need to speak with you by {{clmt_callin_fu_response_date}}. Please call the phone number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, the individual's name, your name, and a call back number</p>
 
         <p>If you do not respond by {{clmt_callin_fu_form_response_date}}, we may decide the case based on the evidence we already have in file. This means that we could find that you/he/she are/is not disabaled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.
 
+	{{>interpreter_language}}
+
         {{>"Standard Signature Block"}}
+
+	{{>standard_CC_block}}
     </body>
 </html>

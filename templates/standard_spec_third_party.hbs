@@ -17,32 +17,9 @@
             </div>
         </div>
 
+	{{>standard_header}}
+
         <div class="rTable">
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">RE: {{clmt_full_name}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">AKA: {{clmt_full_name}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">DOB: {{dateHelperFormat case.claimantInfo.dateOfBirth 'MMMM D, YYYY'}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">SSN: {{case.claimantInfo.ssn}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">Vendor Number: {{vendor.offeringVendor.vendorId}}</div>
-            </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
@@ -81,5 +58,7 @@
         </div>
 
         {{>"Standard Signature Block"}}
+
+	{{>enclosure}}
     </body>
 </html>

@@ -22,11 +22,18 @@ gulp.task("hbs", function() {
         },
         batch: ["./partials/"],
         helpers: {
-            dateHelperFormat: function () {},
+            dateHelperFormat: function (dob) {
+	    	var d = new Date(dob);
+	    	return d.toLocaleDateString();
+	    },
             prompt: function () {
 	    	return "{freeform_text}";
 	    },
-            dateHelperAddDaysToCurrentDate: function () {},
+            dateHelperAddDaysToCurrentDate: function (days) {
+	    	var d = new Date();
+		d.setDate(d.getDate() + days);
+		return d.toDateString();
+	    },
             cannedText: function () {
 	    	return "{clmt_special_instructions}";
 	    },
@@ -39,6 +46,27 @@ gulp.task("hbs", function() {
 	    clmt_full_name: function () {
 	    	var claimantInfo = templateData.case.claimantInfo;
 	    	return claimantInfo.name.firstName + " " + claimantInfo.name.middleName + " " + claimantInfo.name.lastName;
+	    },
+	    clmt_form_return_date: function () {
+	    	return "{clmt_form_return_date}";
+	    },
+	    original_request_date: function () {
+	    	return "{original_request_date}";
+	    },
+	    clmt_fu_form_return_date: function () {
+	    	return "{clmt_fu_form_return_date}";
+	    },
+	    clmt_callin_fu_response_date: function () {
+	    	return "{clmt_callin_fu_response_date}";
+	    },
+	    clmt_ce_callin_response_date: function () {
+	    	return "{clmt_ce_callin_response_date}";
+	    },
+	    age_of_majority: function () {
+	    	return "{age_of_majority}";
+	    },
+	    clmt_827_return_date: function () {
+	    	return "{clmt_827_return_date}";
 	    },
             eq: function (valOne, valTwo, block) {
 

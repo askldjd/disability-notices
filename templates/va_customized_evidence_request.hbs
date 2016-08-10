@@ -12,10 +12,10 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
+
         <div class="rTable">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -59,6 +59,8 @@
         <p>We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.</p>
 
         {{>"Standard Signature Block"}}
+
+	{{>enclosure}}
 
         {{>paperwork_reduction_act}}
     </body>

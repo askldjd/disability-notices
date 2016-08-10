@@ -12,10 +12,9 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
 
         {{>addressee_information}}
 
@@ -32,6 +31,14 @@
 
         <p>If you do not respond by {{clmt_ce_callin_response_date}}, we may decide the case based on the evidence we already have in file. This means that we could find that you/he/she are/is not disabaled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.
 
+	{{>interpreter_language}}
+
         {{>"Standard Signature Block"}}
+
+	{{>enclosure}}<br>
+	
+	{{>multi_language_insert}}
+
+	{{>standard_CC_block}}
     </body>
 </html>

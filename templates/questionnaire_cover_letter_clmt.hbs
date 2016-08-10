@@ -12,12 +12,15 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
 
+	{{>standard_header}}
+
         {{>addressee_information}}
+
+	{{>sno_language}}
+
+	{{>spanish_language}}
 
         <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} because we need more information about your/his/her condition, daily activities, or work history.</p>
 
@@ -41,7 +44,18 @@
 
         <p>Thank you for your help.</p>
 
+	{{>interpreter_language}}
+
         {{>"Standard Signature Block"}}
+
+	{{>enclosure}}<br>
+
+	{{>multi_language_insert}}
+
+	<p>Return envelope</p>
+
+
+	{{>standard_CC_block}}
 
     </body>
 </html>
