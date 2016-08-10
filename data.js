@@ -1,8 +1,8 @@
 module.exports = {
     user: {},
     org: {
-        openTime: null,
-        closeTime: null
+        openTime: "Monday-Thursday 8:00 AM - 4:30 PM;",
+        closeTime: "Friday 8:00 AM - 12:00 PM"
     },
     case: {
         caseId: 575,

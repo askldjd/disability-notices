@@ -46,9 +46,11 @@
 }
 
 .standardHeader {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
+    padding-top: 15px;
+}
+
+.addrInfo {
+    padding-top: 15px;
 }
 
 h3 {

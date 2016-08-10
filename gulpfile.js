@@ -18,14 +18,28 @@ gulp.task("sass", function() {
 gulp.task("hbs", function() {
     var options = {
         partials: {
-            "Standard Signature Block": ""
+            "Standard Signature Block": "<br><br><br><p>{Standard Signature Block}</p>"
         },
         batch: ["./partials/"],
         helpers: {
             dateHelperFormat: function () {},
-            prompt: function () {},
+            prompt: function () {
+	    	return "{freeform_text}";
+	    },
             dateHelperAddDaysToCurrentDate: function () {},
-            cannedText: function () {},
+            cannedText: function () {
+	    	return "{clmt_special_instructions}";
+	    },
+	    med_deferment_end_date: function () {
+	    	return "{med_deferment_end_date}";
+	    },
+	    manually_enter_med_hold_condition: function () {
+	    	return "{manually_enter_med_hold_condition}";
+	    },
+	    clmt_full_name: function () {
+	    	var claimantInfo = templateData.case.claimantInfo;
+	    	return claimantInfo.name.firstName + " " + claimantInfo.name.middleName + " " + claimantInfo.name.lastName;
+	    },
             eq: function (valOne, valTwo, block) {
 
                 if (valOne === valTwo) {
@@ -53,8 +67,8 @@ gulp.task("webserver", function() {
         }));
 });
 
-gulp.task("watch", function () {
-    gulp.watch(["./templates/**/*.hbs", "./sass/**/*.scss"], ["build"]);
+gulp.task("watch", ["build"], function () {
+    gulp.watch(["./templates/**/*.hbs", "./sass/**/*.scss", "./partials/**/*.hbs"], ["build"]);
 });
 
 gulp.task("build", ["sass", "hbs"]);
