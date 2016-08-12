@@ -11,6 +11,9 @@
                 <img src="{{letterhead}}"></img>
             </div>
         </div>
+
+        {{>standard_header}}
+
         <div class="rTable">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -98,7 +101,7 @@
         <p>___________________________________________________________________________________________</p>
         <p>___________________________________________________________________________________________</p>
 
-        <p>If you have seen any health care professionals for your headaches since you filed your claim, complete the chart below.<p>
+        <p>If you have seen any health care professionals for your headaches since you filed your claim, complete the chart below.</p>
 
         <table>
             <tr class="txtuppercase">
@@ -116,7 +119,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="table-break">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -142,5 +145,7 @@
         </p>
 
         {{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
     </body>
 </html>

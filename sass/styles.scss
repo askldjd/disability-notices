@@ -49,8 +49,78 @@
     padding-top: 15px;
 }
 
+.standardFooter {
+    @media print {
+        position: fixed;
+        bottom: 0;
+    }
+}
+
 .addrInfo {
     padding-top: 15px;
+}
+
+.underline {
+    border-bottom: 1px solid $black;
+}
+
+.questionnaire {
+    width: 100%;
+
+    &-row {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -webkit-box-direction: normal;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: flex-start;
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        -webkit-box-align: stretch;
+        -webkit-align-content: stretch;
+        align-content: stretch;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+        margin: 0;
+    }
+
+    &-text {
+        -webkit-box-flex: 0 1 auto;
+        -webkit-flex: 0 1 auto;
+        flex: 0 1 auto;
+        -webkit-box-align: auto;
+        -webkit-align-self: auto;
+        align-self: auto;
+        margin: 0;
+        white-space: nowrap;
+        padding-right: 10px;
+    }
+
+    &-answer {
+        -webkit-box-flex: 0 1 100%;
+        -webkit-flex: 0 1 100%;
+        flex: 0 1 100%;
+        -webkit-align-self: auto;
+        align-self: auto;
+        border-bottom: 1px solid $black;
+
+    }
+
+    .wrap {
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .questionnaire-answer {
+            padding-top: 15px;
+        }
+    }
+}
+
+.page-break {
+    page-break-before: always;
 }
 
 h3 {

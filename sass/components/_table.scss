@@ -12,7 +12,7 @@
 
     &Cell, &Head {
         display: table-cell;
-        padding: 3px 10px;
+        padding: 3px 0;
         width: 33%;
     }
 
@@ -34,6 +34,7 @@
 table {
     border-collapse: collapse;
     width: 100%;
+    page-break-inside: auto;
 
     th, td {
         border: 1px solid $black;
@@ -41,5 +42,10 @@ table {
         word-wrap: break-word;
         padding: 10px;
         text-align: center;
+    }
+
+    tr.table-break {
+        page-break-inside: avoid;
+        page-break-after: auto;
     }
 }
