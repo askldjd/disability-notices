@@ -28,48 +28,96 @@
         <p>1) Do you have seizures? <span class="square"></span> Yes  <span class="square"></span> No</p>
 
         <p>If yes:</p>
-        <ol class="questionnaire">
-            <li class="questionnaire-row">
-                <span class="questionnaire-text">When was your first seizure?</span>
-                <span class="questionnaire-answer"></span>
-            </li>
-            <li class="questionnaire-row">
-                <span class="questionnaire-text">When did you have your last seizure?</span>
-                <span class="questionnaire-answer"></span>
-            </li>
-            <li class="questionnaire-row wrap">
-                <span class="questionnaire-text">Do your seizures usually occur during the day, during the night, or both? Please explain.</span>
-                <span class="questionnaire-answer"></span>
-                <span class="questionnaire-answer"></span>
-            </li>
-        </ol>
-        <ol>
-            <li>When was your first seizure?  __________________________________________________________________</li>
-            <li>When did you have your last seizure? ___________________________________________________________</li>
-            <li>
-                Do your seizures usually occur during the day, during the night, or both? Please explain.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-            <li>How long do the seizure(s) last? ________________________________________________________________</li>
-            <li>How often do seizures occur? __________________________________________________________________</li>
-            <li>List the approximate date(s) of seizure(s) in the last 12 months.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-            <li>Describe what happens before, during, and after you have a seizure and how long until you can resume normal activity.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-        </ol> 
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell no-top">
+                    a)  &nbsp;When was your first seizure?
+                </div>
+                <div class="rTableCell underline no-top"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    b)  &nbsp;When did you have your last seizure?
+                </div>
+                <div class="rTableCell underline"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    c)  &nbsp;Do your seizures usually occur during the day, during the night, or both? Please explain.
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline">
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    d)  &nbsp;How long do the seizure(s) last?
+                </div>
+                <div class="rTableCell underline"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    e)  &nbsp;How often do seizures occur?
+                </div>
+                <div class="rTableCell underline"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    f)  &nbsp;List the approximate date(s) of seizure(s) in the last 12 months.
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline">
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline"></div>
+            </div>
+        </div>
+
+        <div class="rTable questionnaire">
+            <div class="rTableRow">
+                <div class="rTableCell">
+                    g)  &nbsp;Describe what happens before, during, and after you have a seizure and how long until you can resume normal activity.
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline">
+                </div>
+            </div>
+            <div class="rTableRow">
+                <div class="rTableCell underline"></div>
+            </div>
+        </div><br>
 
         <p>2) Describe event(s) that cause your seizure(s).</p>
-        <p>___________________________________________________________________________________________</p>
-        <p>___________________________________________________________________________________________</p>
-        <p>___________________________________________________________________________________________</p>
+        <p class="underline"></p>
+        <p class="underline"></p>
+        <p class="underline"></p><br>
 
         <p>3) List current seizure medication(s).</p>
+
+        <div class="page-break"></div>
 
         <table>
             <tr class="txtuppercase">
@@ -78,7 +126,7 @@
                 <td>If Prescribed, Name of Health Care Professional</td>
                 <td>Side Effect(s)</td>
             </tr>
-            <tr>
+            <tr class="table-break">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -119,7 +167,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="table-break">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -143,7 +191,7 @@
                 <td></td>
                 <td></td>
             </tr>
-            <tr>
+            <tr class="table-break">
                 <td></td>
                 <td></td>
                 <td></td>
@@ -167,5 +215,7 @@
         </p>
 
         {{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
     </body>
 </html>

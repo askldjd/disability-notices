@@ -6,6 +6,8 @@ module.exports = {
         userTitle: "Dsability Examiner"
     },
     requestId: "DC1234567891234567891234P",
+    sno_option: null,
+    language_preference: "English",
     org: {
         openTime: "Monday-Thursday 8:00 AM - 4:30 PM;",
         closeTime: "Friday 8:00 AM - 12:00 PM",

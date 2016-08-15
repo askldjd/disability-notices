@@ -52,13 +52,15 @@ gulp.task("hbs", function() {
                 return claimantInfo.name.firstName + " " + claimantInfo.name.middleName + " " + claimantInfo.name.lastName;
             },
             clmt_form_return_date: function () {
-                return "{clmt_form_return_date}";
+                var funcs = options.helpers;
+                return funcs.dateHelperFormat(funcs.dateHelperAddDaysToCurrentDate(10));
             },
             original_request_date: function () {
                 return "{original_request_date}";
             },
             clmt_fu_form_return_date: function () {
-                return "{clmt_fu_form_return_date}";
+                var funcs = options.helpers;
+                return funcs.dateHelperFormat(funcs.dateHelperAddDaysToCurrentDate(10));
             },
             clmt_callin_fu_response_date: function () {
                 return "{clmt_callin_fu_response_date}";
@@ -67,10 +69,18 @@ gulp.task("hbs", function() {
                 return "{clmt_ce_callin_response_date}";
             },
             age_of_majority: function () {
-                return "{age_of_majority}";
+                return "18";
             },
             clmt_827_return_date: function () {
-                return "{clmt_827_return_date}";
+                var funcs = options.helpers;
+                return funcs.dateHelperFormat(funcs.dateHelperAddDaysToCurrentDate(10));
+            },
+            noteq: function (valOne, valTwo, block) {
+                
+                if (valOne !== valTwo) {
+                    return block.fn(this);
+                }
+
             },
             eq: function (valOne, valTwo, block) {
 

@@ -1,6 +1,27 @@
-<div class="rTable addrInfo">
-    <div class="rTableRow">
-        <div class="rTableCell">{SNO Language}</div>
-        <div class="rTableCell"></div>
+{{#if sno_option}}
+    <div class="rTable addrInfo">
+        <div class="rTableRow">
+            <div class="rTableCell">
+                {{#eq sno_option "3"}}
+                                We are sending this letter to you in both a standard print version and in a Braille version.  You will receive them in separate envelopes
+                {{/eq}}
+
+                {{#eq sno_option "4"}}
+                    We are sending this letter to you in both a standard print version and on a compact disc in Microsoft Word format.  You will receive them in separate envelopes
+                {{/eq}}
+
+                {{#eq sno_option "6"}}
+                    We are sending this letter to you in both a standard print version and on an audio compact disc.  You will receive them in separate envelopes
+                {{/eq}}
+
+                {{#eq sno_option "7"}}
+                    We are sending this letter to you in both a standard print version and a large print version.  You will receive them in separate envelopes
+                {{/eq}}
+
+                {{#eq sno_option "2"}}
+                    As you requested, we will call you within five business days of the date of this letter to read it to you.
+                {{/eq}}
+            </div>
+        </div>
     </div>
-</div>
+{{/if}}

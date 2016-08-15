@@ -14,13 +14,13 @@
             </div>
         </div>
 
-	{{>standard_header}}
+        {{>standard_header}}
 
         {{>addressee_information}}
 
-	{{>sno_language}}
+        {{>sno_language}}
 
-	{{>spanish_language}}
+        {{>spanish_language}}
 
         <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing about your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s disability claim</p>
 
@@ -32,16 +32,18 @@
 
         <p>Thank you for your help.</p>
 
-	{{>interpreter_language}}
+        {{>interpreter_language}}
 
         {{>"Standard Signature Block"}}
 
-	{{>enclosure}}<br>
-	{{>multi_language_insert}}
+        {{>enclosure}}<br>
+        {{>multi_language_insert}}
 
-	<p>Return Envelope</p>
+        <p>Return Envelope</p>
 
-	{{>standard_CC_block}}
+        {{>standard_CC_block}}
+
+        {{>standard_footer}}
 
     </body>
 </html>

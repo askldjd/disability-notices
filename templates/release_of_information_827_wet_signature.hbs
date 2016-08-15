@@ -14,13 +14,13 @@
             </div>
         </div>
 
-	{{>standard_header}}
+        {{>standard_header}}
 
         {{>addressee_information}}
 
-	{{>sno_language}}
+        {{>sno_language}}
 
-	{{>spanish_language}}
+        {{>spanish_language}}
 
         <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you because we need additional signed authorization form(s) to send to your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s medical sources.</p>
 
@@ -46,16 +46,18 @@
 
         <p>Thank you for your help.</p>
 
-	{{>interpreter_language}}
+        {{>interpreter_language}}
 
         {{>"Standard Signature Block"}}
 
-	{{>enclosure}}<br>
+        {{>enclosure}}<br>
 
-	{{>multi_language_insert}}
-	
-	<p>SSA-827 (Authorization to Disclose Information to the Social Security Administration (SSA))<br>DDS Return Envelope</p>
+        {{>multi_language_insert}}
 
-	{{>standard_CC_block}}
+        <p>SSA-827 (Authorization to Disclose Information to the Social Security Administration (SSA))<br>DDS Return Envelope</p>
+
+        {{>standard_CC_block}}
+
+        {{>standard_footer}}
     </body>
 </html>

@@ -2,6 +2,33 @@
     display: table;
     width: 100%;
 
+    &.questionnaire {
+        border-spacing: 0px;
+        border-collapse: collapse;
+        margin-left: 40px;
+
+        .rTableCell {
+            white-space: nowrap;
+            padding-top: 15px;
+            padding-bottom: 0;
+
+            &.no-top {
+                padding-top: 0px !important;
+            }
+
+            &:nth-child(1) {
+                width: auto;
+                padding-right: 10px;
+            }
+
+            &.underline {
+                width: 100%;
+                padding-top: 30px;
+            }
+        }
+    }
+
+
     &Row {
         display: table-row;
     }
@@ -46,6 +73,6 @@ table {
 
     tr.table-break {
         page-break-inside: avoid;
-        page-break-after: auto;
+        page-break-before: always;
     }
 }
