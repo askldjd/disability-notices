@@ -5,6 +5,7 @@ var sass = require("gulp-sass");
 var concat = require("gulp-concat");
 var rename = require("gulp-rename");
 var handlebars = require("gulp-compile-handlebars");
+var inlinesource = require("gulp-inline-source");
 var webserver = require("gulp-webserver");
 var templateData = require("./data");
 
@@ -97,7 +98,14 @@ gulp.task("hbs", function() {
         .pipe(rename(function(path) {
             path.extname = ".html";
         }))
+        .pipe(inlinesource())
         .pipe(gulp.dest("dist"));
+});
+
+gulp.task("inlinesource", function() {
+    gulp.src("./dist/*.html")
+        .pipe(inlinesource())
+        .pipe(gulp.dest("out"));
 });
 
 gulp.task("webserver", function() {

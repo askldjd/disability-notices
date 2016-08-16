@@ -6,14 +6,29 @@
         border-spacing: 0px;
         border-collapse: collapse;
         margin-left: 40px;
+        margin-right: 1cm;
+        width: 176mm;
+
+        .rTableRow {
+            max-width: 100%;
+        }
 
         .rTableCell {
             white-space: nowrap;
             padding-top: 15px;
             padding-bottom: 0;
 
+            &.wrap {
+                white-space: normal;
+            }
+
             &.no-top {
                 padding-top: 0px !important;
+            }
+
+            &.underline {
+                width: 100%;
+                padding-top: 30px;
             }
 
             &:nth-child(1) {
@@ -21,9 +36,9 @@
                 padding-right: 10px;
             }
 
-            &.underline {
-                width: 100%;
-                padding-top: 30px;
+            &:nth-child(2) {
+                width: auto;
+                min-width: 105mm;
             }
         }
     }

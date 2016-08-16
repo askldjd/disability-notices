@@ -12,37 +12,8 @@
     text-align: center;
 }
 
-.clearfix {
-    overflow: auto;
-    zoom: 1;
-}
-
-.clearfix::before {
-    content: " ";
-}
-
 .txtuppercase {
     text-transform: uppercase;
-}
-
-.stateHeader {
-    display: flex;
-
-    &Parent {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    &Text {
-        flex-direction: column;
-        justify-content: flex-start;
-        align-self: flex-start;
-    }
-
-    &Img {
-        flex-direction: row;
-        justify-content: flex-end;
-    }
 }
 
 .standardHeader {
@@ -50,10 +21,12 @@
 }
 
 .standardFooter {
+
     @media print {
         position: fixed;
         bottom: 0;
     }
+
 }
 
 .addrInfo {
@@ -77,3 +50,16 @@ body {
     font-size: 15px;
 }
 
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+@media print {
+
+    html, body {
+        width: 190mm;
+        height: 297mm;
+    }
+
+}
