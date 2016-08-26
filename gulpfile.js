@@ -77,7 +77,7 @@ gulp.task("hbs", function() {
                 return funcs.dateHelperFormat(funcs.dateHelperAddDaysToCurrentDate(10));
             },
             noteq: function (valOne, valTwo, block) {
-                
+
                 if (valOne !== valTwo) {
                     return block.fn(this);
                 }
@@ -111,6 +111,7 @@ gulp.task("inlinesource", function() {
 gulp.task("webserver", function() {
     gulp.src("dist")
         .pipe(webserver({
+            port: 80,
             livereload: true,
             directoryListing: {enable: true, path: "./dist/"},
             open: true

@@ -75,7 +75,7 @@
 
 table {
     border-collapse: collapse;
-    width: 100%;
+    width: $table-width;
     page-break-inside: auto;
 
     th, td {
@@ -86,8 +86,73 @@ table {
         text-align: center;
     }
 
-    tr.table-break {
-        page-break-inside: avoid;
-        page-break-before: always;
+    tr {
+
+        &.table-break {
+            page-break-inside: avoid;
+            page-break-before: always;
+        }
+
+        &.txtuppercase {
+
+            td {
+                height: auto;
+            }
+        }
+
     }
+
+    &.questionnaire {
+
+        &.indent {
+            margin-left: 30px;
+        }
+
+        th, td {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        th, td:not(.underline) {
+            border: 0px;
+            text-align: left;
+            vertical-align: bottom;
+        }
+
+        td:nth-child(1):not(.underline) {
+            white-space: nowrap;
+            width: auto;
+            padding-left: 0px;
+
+            &.wrap {
+                white-space: normal;
+            }
+        }
+
+        td:nth-child(1).underline {
+            margin-left: 30px;
+        }
+
+        td:nth-child(2) {
+            width: 100%;
+        }
+
+    }
+
+    &.signature {
+        border-collapse: separate;
+        border-spacing: 15px;
+        margin-left: -15px;
+        width: 100%;
+
+        th, td {
+            text-align: left;
+            padding-left: 5px;
+            border: none;
+            border-top: 1px solid black;
+            vertical-align: top;
+            height: 40px;
+        }
+    }
+
 }
