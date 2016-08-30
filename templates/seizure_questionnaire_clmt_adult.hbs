@@ -3,15 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <title>Seizure Questionnaire Claimant-Adult</title>
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" inline href="../dist/css/styles.css">
     </head>
-    <body>
-        <div class="stateHeaderParent">
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
-        </div>
-        <div class="rTable">
+    <body role="document">
+        <div class="content">
+
+    	{{>standard_header}}
+
+        <div class="rTable" role="contentinfo">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
@@ -19,46 +18,94 @@
             </div>
         </div>
 
-        {{>barcode}}
+        <h3 class="title txtuppercase" role="heading">Please Complete And Return By {{clmt_form_return_date}}</h3>
 
-        <h3 class="title txtuppercase">Please Complete And Return By {{clmt_form_return_date}}</h3>
-
-        <p class="title txtuppercase"><strong><u>Seizure Questionnaire</u></strong></p>
+        <h4 class="title txtuppercase" role="heading">Seizure Questionnaire</h4>
 
         <p>If you need more space, please attach additional page(s).</p>
 
-        <p>1) Do you have seizures? <span class="square"></span> Yes  <span class="square"></span> No</p>
+        <p readonly tabindex="0">1) Do you have seizures? <span class="square" role="menuitemcheckbox" tabindex="-1"></span> Yes  <span class="square" role="menuitemcheckbox" tabindex="-1"></span> No</p>
 
-        <p>If yes:</p>
-        <ol>
-            <li>When was your first seizure?  ___________________________________________________________________</li>
-            <li>When did you have your last seizure? ____________________________________________________________</li>
-            <li>
-                Do your seizures usually occur during the day, during the night, or both? Please explain.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-            <li>How long do the seizure(s) last? ________________________________________________________________</li>
-            <li>How often do seizures occur? ___________________________________________________________________</li>
-            <li>List the approximate date(s) of seizure(s) in the last 12 months.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-            <li>Describe what happens before, during, and after you have a seizure and how long until you can resume normal activity.
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-                <span>___________________________________________________________________________________________</span>
-            </li>
-        </ol> 
+        <p tabindex="0">If yes:</p>
 
-        <p>2) Describe event(s) that cause your seizure(s).</p>
-        <p>___________________________________________________________________________________________</p>
-        <p>___________________________________________________________________________________________</p>
-        <p>___________________________________________________________________________________________</p>
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    a)  &nbsp;When was your first seizure?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
 
-        <p>3) List current seizure medication(s).</p>
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    b)  &nbsp;When did you have your last seizure?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
 
-        <table>
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    c)  &nbsp;Do your seizures usually occur during the day, during the night, or both? Please explain.
+                </td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    d)  &nbsp;How long do the seizure(s) last?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    e)  &nbsp;How often do seizures occur?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly tabindex="0">
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    f)  &nbsp;List the approximate date(s) of seizure(s) in the last 12 months.
+                </td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly tabindex="0">
+            <tr>
+                <td class="wrap" role="cell" readonly tabindex="0">
+                    g)  &nbsp;Describe what happens before, during, and after you have a seizure and how long until you can resume normal activity.
+                </td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <table class="questionnaire" role="table" readonly tabindex="0">
+            <tr>
+                <td role="cell" readonly tabindex="0">2) Describe event(s) that cause your seizure(s).</td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <p readonly tabindex="0">3) List current seizure medication(s).</p>
+
+        <table role="table" readonly tabindex="0">
             <tr class="txtuppercase">
                 <td>Medication, Dosage, and Frequency</td>
                 <td>Date Started</td>
@@ -85,12 +132,18 @@
             </tr>
         </table>
 
-        <p>4) Have you visited an emergency room for seizures? If so, when and where?</p>
-        <p>___________________________________________________________________________________________</p>
-        <p>___________________________________________________________________________________________</p>
+        <table class="questionnaire" role="table" readonly tabindex="0">
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    4) Have you visited an emergency room for seizures? If so, when and where?
+                </td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
 
-        <p>5) If you have seen any health care professionals for your seizures since you filed your claim, complete the chart below.<p>
-        <table>
+        <p readonly tabindex="0">5) If you have seen any health care professionals for your seizures since you filed your claim, complete the chart below.<p>
+        <table role="table" readonly tabindex="0">
             <tr class="txtuppercase">
                 <td>Name of Health Care Professional</td>
                 <td>Address And Phone Number</td>
@@ -118,8 +171,8 @@
             </tr>
         </table>
 
-        <p>6) Provide the name, address, and phone number of any health care professionals and other individuals (including non-family members) who have witnessed your seizure(s). </p>
-        <table>
+        <p readonly tabindex="0">6) Provide the name, address, and phone number of any health care professionals and other individuals (including non-family members) who have witnessed your seizure(s). </p>
+        <table role="table" readonly tabindex="0">
             <tr class="txtuppercase">
                 <td>Witness Name</td>
                 <td>Address And Phone Number</td>
@@ -142,17 +195,25 @@
             </tr>
         </table>
 
-        <br><br><br><br>
+        <br><br><br>
 
-        <p class="signature">
-            <span>__________________________________________</span><span>___________________</span><span>___________________________</span>
-            <span>Name of person completing this form (Please print)</span><span>Date</span><span>Phone</span>
-        <p>
-        <p class="signature address">
-        <span>__________________________________________</span><span>___________________</span><span>_____________</span><span>____________</span>
-            <span>Address</span><span>City</span><span>State</span><span>ZIP</span>
-        </p>
+        <table class="signature" role="address">
+            <tr>
+                <td>Name of person completing this form (Please print)</td>
+                <td>Date</td>
+                <td colspan="2">Phone</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+                <td>ZIP</td>
+            </tr>
+        </table>
 
         {{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
+    </div>
     </body>
 </html>

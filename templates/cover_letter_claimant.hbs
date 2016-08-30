@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Medical Deferment-Expired</title>
+        <title>Cover Letter Claimant</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -13,21 +13,22 @@
                 <span>Phone 208-327-7331505</span>
             </div>
         </div>
+
         {{>standard_header}}
+
+        {{>addressee_information}}
 
         {{>sno_language}}
 
         {{>spanish_language}}
 
-        {{>addressee_information}}
-
-        <p>We are the office that makes disability decisions for the Social Security Administration. Because of the nature of your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s condition, or when your/his/her condition began, our rules required us to wait until {{med_deferment_end_date}} to evaluate your/his/her claim. We now need updated information about your/his/her condition, medical sources, or treatment.</p>
+        <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing about your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s disability claim</p>
 
         <p>{{prompt text "Enter text here"}}</p>
 
         <p>{{cannedText cannedText}}</p>
 
-        <p>Please call the phone number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, and a call back number.</p>
+        <p>If you have any questions, please contact us at the number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, your name, his/her name, and a call back number.</p>
 
         <p>Thank you for your help.</p>
 
@@ -36,8 +37,9 @@
         {{>"Standard Signature Block"}}
 
         {{>enclosure}}<br>
-
         {{>multi_language_insert}}
+
+        <p>Return Envelope</p>
 
         {{>standard_CC_block}}
 

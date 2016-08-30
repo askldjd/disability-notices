@@ -12,12 +12,15 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
 
+	{{>standard_header}}
+
         {{>addressee_information}}
+
+	{{>sno_language}}
+
+	{{>spanish_language}}
 
         <p>We are the office that makes disability decisions for the Social Security Administration. To be eligible for disability benefits, you/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} must have an impairment or combination of impairments that meet our rules. You/he/she must have a medical condition(s) that keeps you/him/her from doing any type of work, and has lasted or is expected to last for at least 12 months in a row or result in death.</p>
 
@@ -31,7 +34,17 @@
 
         <p>Thank you for your help.</p>
 
+        {{>interpreter_language}}
+
         {{>"Standard Signature Block"}}
+
+        {{>enclosure}}<br>
+
+        {{>multi_language_insert}}
+
+        {{>standard_CC_block}}
+
+        {{>standard_footer}}
 
     </body>
 </html>

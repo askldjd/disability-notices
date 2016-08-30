@@ -17,6 +17,8 @@
             </div>
         </div>
 
+	{{>standard_header}}
+
         <div class="rTable">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -26,17 +28,12 @@
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
-                <div class="rTableCell">AKA: {{clmt_full_name}}</div>
+                <div class="rTableCell">AKA:</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
                 <div class="rTableCell">DOB: {{dateHelperFormat case.claimantInfo.dateOfBirth 'MMMM D, YYYY'}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">SSN: {{case.claimantInfo.ssn}}</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -86,6 +83,10 @@
         <p>Thank you for your help.</p>
 
         {{>"Standard Signature Block"}}
+
+	{{>enclosure}}<br>
+
+	SSA-827 (Authorization to Disclose Information to the Social Security Administration (SSA))
 
         {{>paperwork_reduction_act}}
     </body>

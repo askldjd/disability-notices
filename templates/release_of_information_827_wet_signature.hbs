@@ -2,26 +2,28 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Release Of Information (827) Update</title>
+        <title>Release Of Information (827) Wet Signature</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
+        <div class="content">
         <div class="stateHeaderParent">
             <div class="stateHeaderText">
                 <h3>DISABILITY DETERMINATIONS SERVICE DIVISION</h3>
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+        {{>standard_header}}
 
         {{>addressee_information}}
 
-        <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you because we need an updated signed authorization form to send to your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s health care provider(s).</p>
+        {{>sno_language}}
 
-        <p>We are enclosing a new authorization form. Please sign and date the form with black or blue ink. A witness should also sign the form. This witness can be a friend or relative</p>
+        {{>spanish_language}}
+
+        <p>We are the office that makes disability decisions for the Social Security Administration.  We are writing to you because we need additional signed authorization form(s) to send to your/{{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}}'s medical sources.</p>
 
         <p><strong>Who Should Sign The Form(s)</strong></p>
 
@@ -37,9 +39,7 @@
 
         <p><strong>What You Need To Do</strong></p>
 
-        <p>Please return the completed form(s) in the enclosed envelope by {{clmt_827_return_date}}. You may use the enclosed return envelope or fax your completed form to us. Please note the return address may be to a scanning center who works with us. <strong>The completed form must include the barcode page on top of the form</strong></p>
-        
-        <p>If you do not return the form(s), we may decide the case based on the information we already have in file. This means that we could find that you/he/she are/is not disabled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.</p>
+        <p>Please return the completed form(s) in the enclosed envelope by {{clmt_827_return_date}}. If you do not return the form(s), we may decide the case based on the information we already have in file. This means that we could find that you/he/she are/is not disabled based on our rules or that your/his/her disability has ended if you/he/she are/is already getting benefits.</p>
 
         <p><strong>If You Have Questions</strong></p>
 
@@ -47,7 +47,19 @@
 
         <p>Thank you for your help.</p>
 
+        {{>interpreter_language}}
+
         {{>"Standard Signature Block"}}
 
+        {{>enclosure}}<br>
+
+        {{>multi_language_insert}}
+
+        <p>SSA-827 (Authorization to Disclose Information to the Social Security Administration (SSA))<br>DDS Return Envelope</p>
+
+        {{>standard_CC_block}}
+
+    </div>
+    {{>standard_footer}}
     </body>
 </html>

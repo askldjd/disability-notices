@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Drug And Alcohol Questionnaire Claimant</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div class="stateHeaderParent">
+            <div class="stateHeader">
+                <img src="{{letterhead}}"></img>
+            </div>
+        </div>
+
+        {{>standard_header}}
+
+        <div class="rTable">
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Claimant Name: {{clmt_full_name}}</div>
+            </div>
+        </div>
+
+        {{>barcode}}
+
+        <h3 class="title txtuppercase">Please Complete And Return By {{clmt_form_return_date}}</h3>
+
+        <br>
+
+        <p class="title txtuppercase"><strong><u>Drug And Alcohol Use Questionnaire</u></strong></p>
+
+        <p>1) Have you been diagnosed with a substance abuse disorder such as drug addiction or alcoholism? <br><span class="square"></span> Yes  <span class="square"></span> No  (If no, skip to question 2)</p>
+
+        <p>What was the diagnosis?  ______________________________________________________________________</p>
+        <p>Who diagnosed it? ___________________________________________________________________________</p>
+        <p>When was it diagnosed? ______________________________________________________________________</p>
+
+        <p>2) Since you began using drugs or alcohol, were there any periods of time when you did not use these substances? <br><span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <p>If yes, when and for how long?  _________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>3) Is your daily functioning affected when you are using drugs or alcohol? (eating, paying bills, cleaning house, grooming, etc.) <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <p>If yes, describe.  _____________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        
+        <p>4) Has your drug or alcohol use caused difficulties in geetting or keeping a job? <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <p>If yes, describe.  _____________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <p>5) Have you ever been arrested for a drug or alcohol related offense? <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <p>If yes, how many times?  __________________ When was the last time? ________________________________</p>
+
+        <p>6) If you have seen any health care professional(s) or been in a treatment program for your drug or alcohol use since you filed your claim, complete the chart below.<p>
+        <div class="page-break"></div>
+        <table>
+            <tr class="txtuppercase">
+                <td>Name of Health Care Professional</td>
+                <td>Address And Phone Number</td>
+                <td>Date of Last Visit and Next Scheduled Appointment (if any)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>7) Provide the name, address, and phone number, an relationship of three individuals who we may contact regarding your drug or alcohol use (i.e., counselor, social worker, landlord, neighbors, relatives, or friends)</p>
+        <table>
+            <tr class="txtuppercase">
+                <td>Name</td>
+                <td>Relationship</td>
+                <td>Address And Phone Number</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <p>8) Provide any additional information that could be helpful to us in reaching a decision on your disability claim. If you need more space, please attach additional page(s).</p>
+
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+        <p>___________________________________________________________________________________________</p>
+
+        <br><br><br><br>
+
+        <p class="signature">
+            <span>_________________________________________</span><span>__________________</span><span>________________________</span>
+            <span>Name of person completing this form (Please print)</span><span>Date</span><span>Phone</span>
+        <p>
+        <p class="signature address">
+        <span>__________________________________________</span><span>___________________</span><span>_____________</span><span>____________</span>
+            <span>Address</span><span>City</span><span>State</span><span>ZIP</span>
+        </p>
+
+        {{>paperwork_reduction_act}}
+        
+        {{>standard_footer}}
+    </body>
+</html>

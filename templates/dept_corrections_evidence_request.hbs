@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Standard Spec Vendor</title>
+        <title>Dept Of Corrections Evidence Request</title>
         <link rel="stylesheet" href="/css/styles.css">
     </head>
     <body>
@@ -17,7 +17,7 @@
             </div>
         </div>
 
-	{{>standard_header}}
+        {{>standard_header}}
 
         <div class="rTable">
             <div class="rTableRow">
@@ -45,23 +45,34 @@
                 <div class="rTableCell"></div>
                 <div class="rTableCell">Vendor Number: {{vendor.offeringVendor.vendorId}}</div>
             </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">Date: {{currentDate}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">Case ID: {{case.caseId}}</div>
-            </div>
         </div>
 
         {{>addressee_information}}
 
+        {{#eq case.qdd_priority_flag 'Y'}}
+            <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
+        {{/eq}}
+        {{#eq case.cal_priority_flag 'Y'}}
+            <p class="txtuppercase"><strong>please expedite this urgent request.</strong></p>
+        {{/eq}}
+
+        <p>{{clmt_full_name}} is applying for or is receiving disability benefits due to the following conditions: {{case.allegationsText}}.  To help us evaluate this claim, please send records covering the periods of:</p>
+
+        <p>{{prompt dateRange "Treatment Dates" "MMMM, DD, YYYY"}}</p>
+
+        <p>{{prompt text "Enter text here"}}</p>
+
+        <p>{{cannedText cannedText}}</p>
+
+        <p>Please respond by {{dateHelperAddDaysToCurrentDate 10 "MMMM D, YYYY"}}.  We are enclosing a signed HIPAA compliant authorization (SSA-827) for the release of medical records and information.</p>
+
+        <p>If you have any questions, please contact us at the number(s) shown below from {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, the individual's name, your name, and a call back number.</p>
+
+        <p>Thank you for your help.</p>
+
         {{>"Standard Signature Block"}}
 
-        {{>enclosure}}
+        {{>enclosure}}<br>
 
         {{>standard_footer}}
     </body>

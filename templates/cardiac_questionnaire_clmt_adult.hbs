@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cardiac Questionnaire Claimant-Adult</title>
+        <link rel="stylesheet" inline href="../dist/css/styles.css">
+    </head>
+    <body>
+        <div class="content">
+
+    	{{>standard_header}}
+
+        <div class="rTable">
+            <div class="rTableRow">
+                <div class="rTableCell"></div>
+                <div class="rTableCell"></div>
+                <div class="rTableCell">Claimant Name: {{clmt_full_name}}</div>
+            </div>
+        </div>
+
+        <h3 class="title txtuppercase">Please Complete And Return By {{clmt_form_return_date}}</h3>
+
+        <h4 class="title txtuppercase">Cardiac Questionnaire</h4>
+
+        <p>If you need more space, please attach additional page(s).</p>
+
+        <p>1) Do you have any chest discomfort? <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0" class="no-top">
+                    a)  &nbsp;How often does it occur?
+                </td>
+                <td class="underline no-top" tabindex="-1"></td>
+            </tr>
+            <tr><td class="underline" tabindex="-1" colspan="2"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    b)  &nbsp;What brings on your chest discomfort?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+            <tr><td class="underline" tabindex="-1" colspan="2"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    c)  &nbsp;What does it feel like?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+            <tr><td class="underline" tabindex="-1" colspan="2"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    d)  &nbsp;How long do episodes last?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    e)  &nbsp;What relieves it?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+            <tr><td class="underline" tabindex="-1" colspan="2"></td></tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    f)  &nbsp;Does it radiate? If so, where?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    g)  &nbsp;Does it occur at rest?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    h)  &nbsp;Does it awaken you from sleep?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <br>
+
+        <p>2) Do you have shortness of breath? <span class="square"></span> Yes  <span class="square"></span> No</p>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0" class="no-top">
+                    a)  &nbsp;When does it occur?
+                </td>
+                <td class="underline no-top" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    b)  &nbsp;What brings it on?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    c)  &nbsp;What relieves it?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    d)  &nbsp;How far can you walk without stopping to rest?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire indent" role="table" readonly>
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    e)  &nbsp;How many flights of stairs can you climb without stopping to rest?
+                </td>
+                <td class="underline" tabindex="-1"></td>
+            </tr>
+        </table>
+        
+        <p>3) Do you have additional symptoms (for example, fatigue, weakness, lightheadedness)? <span class="square"></span> Yes  <span class="square"></span> No <br>
+        If yes, describe.</p>
+
+        <table class="questionnaire" role="table" readonly tabindex="0">
+            <tr><td class="underline no-top" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <p>4) List current cardiac medication(s).</p>
+
+        <table>
+            <tr class="txtuppercase">
+                <td>Medication, Dosage, and Frequency</td>
+                <td>Date Started</td>
+                <td>If Prescribed, Name of Health Care Professional</td>
+                <td>Side Effect(s)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table class="questionnaire" role="table" readonly tabindex="0">
+            <tr>
+                <td role="cell" readonly tabindex="0">
+                    5) Describe any activities you have stopped due to shortness of breath or chest discomfort.
+                </td>
+            </tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+            <tr><td class="underline" tabindex="-1"></td></tr>
+        </table>
+
+        <br>
+
+        <p>6) If you have seen any health care professionals for your cardiac condition since you filed your claim, complete the chart below.<p>
+
+        <div class="page-break"></div>
+
+        <table>
+            <tr class="txtuppercase">
+                <td>Name of Health Care Professional</td>
+                <td>Address And Phone Number</td>
+                <td>Date of Last Visit and Next Scheduled Appointment (if any)</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <br><br><br>
+
+        <table class="signature" role="address">
+            <tr>
+                <td>Name of person completing this form (Please print)</td>
+                <td>Date</td>
+                <td colspan="2">Phone</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>City</td>
+                <td>State</td>
+                <td>ZIP</td>
+            </tr>
+        </table>
+
+        {{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
+    </body>
+</html>

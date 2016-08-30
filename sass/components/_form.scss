@@ -9,7 +9,7 @@
     margin-bottom: -2px;
 }
 
-.signature {
+.signature-old {
     span {
         display: inline-block;
         padding-right: 15px;
@@ -22,11 +22,11 @@
             padding-right: 130px;
         }
     }
-    
+
     &.address {
         span {
             &:nth-child(5) {
-                padding-right: 280px;
+                padding-right: 290px;
             }
 
             &:nth-child(6) {

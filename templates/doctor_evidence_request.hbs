@@ -12,10 +12,9 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
 
         <div class="rTable">
             <div class="rTableRow">
@@ -26,17 +25,12 @@
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
-                <div class="rTableCell">AKA: {{clmt_full_name}}</div>
+                <div class="rTableCell">AKA:</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
                 <div class="rTableCell">DOB: {{dateHelperFormat case.claimantInfo.dateOfBirth 'MMMM D, YYYY'}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">SSN: {{case.claimantInfo.ssn}}</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -56,7 +50,7 @@
 
         <p>We are the office that makes disability decisions for the Social Security Administration.  {{case.claimantInfo.name.firstName}} {{case.claimantInfo.name.middleName}} {{case.claimantInfo.name.lastName}} is applying for or is receiving disability benefits due to the following conditions:  {{case.allegationsText}}.  This is not an authorization to perform an examination.</p>
 
-        <p><strong>What We Need From You</strong></p>
+        <p class="subtitle"><strong>What We Need From You</strong></p>
 
         <p>To help us evaluate this claim, please send records covering the period of:</p>
 
@@ -83,13 +77,21 @@
         If it is determined that we need additional information regarding your patient's impairments, would you be willing to perform an examination to provide additional findings?
         Please contact us if you would be willing to perform this examination.  We will assume that you do not wish to perform the examination if you do not response.</p>
 
-        <p><strong>If You Have Questions</strong></p>
+        <p class="subtitle"><strong>If You Have Questions</strong></p>
 
         <p>If you have any questions, please contact us at the number(s) shown below {{org.openTime}} and {{org.closeTime}}.  When you call or leave a message, please provide the Case ID:  {{case.caseId}}, the individual's name, your name, and a call back number.</p>
 
+        <div class="page-break"></div>
         <p>Thank you for your help.</p>
 
         {{>"Standard Signature Block"}}
 
+	{{>enclosure}}
+
+        {{>authorization_827}}
+
+	{{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
     </body>
 </html>

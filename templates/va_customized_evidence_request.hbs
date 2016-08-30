@@ -12,10 +12,10 @@
                 <span>1505 N Mckinney Ln P.O. Box 21 Boise ID 83707-8533</span>
                 <span>Phone 208-327-7331505</span>
             </div>
-            <div class="stateHeader">
-                <img src="{{letterhead}}"></img>
-            </div>
         </div>
+
+	{{>standard_header}}
+
         <div class="rTable">
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -25,17 +25,12 @@
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
-                <div class="rTableCell">AKA: {{clmt_full_name}}</div>
+                <div class="rTableCell">AKA:</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
                 <div class="rTableCell"></div>
                 <div class="rTableCell">DOB: {{dateHelperFormat case.claimantInfo.dateOfBirth 'MMMM D, YYYY'}}</div>
-            </div>
-            <div class="rTableRow">
-                <div class="rTableCell"></div>
-                <div class="rTableCell"></div>
-                <div class="rTableCell">SSN: {{case.claimantInfo.ssn}}</div>
             </div>
             <div class="rTableRow">
                 <div class="rTableCell"></div>
@@ -60,6 +55,12 @@
 
         {{>"Standard Signature Block"}}
 
+	{{>enclosure}}
+
+        {{>authorization_827}}
+
         {{>paperwork_reduction_act}}
+
+        {{>standard_footer}}
     </body>
 </html>
